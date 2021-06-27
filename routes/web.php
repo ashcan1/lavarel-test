@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\productsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,8 +35,14 @@ Route::get('/users', function(){
 Route::get('/users', function() {
     return redirect('/');
 });
-*/
+
 
 Route::get('/', function(){
     return view('home');
 });
+
+*/
+
+//returining controller 
+
+Route::get('/products', [productsController::class, 'index']);
