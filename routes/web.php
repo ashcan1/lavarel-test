@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
 
@@ -21,3 +21,21 @@ Route::get('/', function () {
  Route::get('/users', function(){
      return 'welcome to the users page';
  });
+//route json object 
+
+Route::get('/users', function(){
+    return response()->json([
+        'name'=>'ash',
+        'last name' => 'tahmasbi'
+    ]);
+    
+});
+// route to users 
+Route::get('/users', function() {
+    return redirect('/');
+});
+*/
+
+Route::get('/', function(){
+    return view('home');
+});
